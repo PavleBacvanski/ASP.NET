@@ -18,20 +18,6 @@ namespace MVCApp.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
         //Prikaz liste proizvoda iz baze
         public ActionResult ProductList()
         {
@@ -65,6 +51,52 @@ namespace MVCApp.Controllers
             var proizvodi = JsonConvert.DeserializeObject<RootObject>(json);
 
             return View(proizvodi.Proizvodi);
+        }
+
+        //Dodavaje novog proizvoda
+        public ActionResult AddProduct()
+        {
+            ViewBag.Message = "Add product to list";
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddProduct(ProizvodModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                int dataCreated = CreateProduct(model.Naziv, model.Opis, model.Kategorija,
+                    model.Proizvodjac, model.Dobavljac, model.Cena);
+
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
+        //Izmena proizvoda
+        public ActionResult EditProduct()
+        {
+            ViewBag.Message = "Edit product from list";
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditProduct(ProizvodModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                int dataUpdated = UpdateProduct(model.Naziv, model.Opis, model.Kategorija,
+                    model.Proizvodjac, model.Dobavljac, model.Cena);
+
+                return RedirectToAction("Index");
+            }
+
+            return View();
         }
 
     }

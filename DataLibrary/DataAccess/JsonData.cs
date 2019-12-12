@@ -9,9 +9,13 @@ namespace DataLibrary.DataAccess
 {
     public class JsonData
     {
+        //Putanja do json file
         public static string GetJson()
         {
-            string path = @"C:\Users\Aorus Pro\source\repos\WirelessMedia\DataLibrary\DataAccess\TechJson.json";
+            string subfoldername = "Json";
+            string filename = "TechJson.json";
+
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, subfoldername, filename);
 
             StreamReader reader = new StreamReader(path);
             return reader.ReadToEnd();
