@@ -6,3 +6,13 @@ C:\Users\Aorus Pro\source\repos\WirelessMedia\DataLibrary\obj\Debug\DataLibrary.
 C:\Users\Aorus Pro\source\repos\WirelessMedia\DataLibrary\obj\Debug\DataLibrary.csproj.CopyComplete
 C:\Users\Aorus Pro\source\repos\WirelessMedia\DataLibrary\obj\Debug\DataLibrary.dll
 C:\Users\Aorus Pro\source\repos\WirelessMedia\DataLibrary\obj\Debug\DataLibrary.pdb
+C:\Users\Aorus Pro\Documents\GitHub\ASP.NET\DataLibrary\bin\Debug\DataLibrary.dll
+C:\Users\Aorus Pro\Documents\GitHub\ASP.NET\DataLibrary\bin\Debug\DataLibrary.pdb
+C:\Users\Aorus Pro\Documents\GitHub\ASP.NET\DataLibrary\bin\Debug\Dapper.dll
+C:\Users\Aorus Pro\Documents\GitHub\ASP.NET\DataLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Aorus Pro\Documents\GitHub\ASP.NET\DataLibrary\bin\Debug\Dapper.xml
+C:\Users\Aorus Pro\Documents\GitHub\ASP.NET\DataLibrary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Aorus Pro\Documents\GitHub\ASP.NET\DataLibrary\obj\Debug\DataLibrary.csprojAssemblyReference.cache
+C:\Users\Aorus Pro\Documents\GitHub\ASP.NET\DataLibrary\obj\Debug\DataLibrary.csproj.CopyComplete
+C:\Users\Aorus Pro\Documents\GitHub\ASP.NET\DataLibrary\obj\Debug\DataLibrary.dll
+C:\Users\Aorus Pro\Documents\GitHub\ASP.NET\DataLibrary\obj\Debug\DataLibrary.pdb

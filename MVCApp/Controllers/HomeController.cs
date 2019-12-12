@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.Mvc;
 using DataLibrary;
 using static DataLibrary.DataAccess.SQLData;
+using static DataLibrary.DataAccess.JsonData;
+using Newtonsoft.Json;
 
 namespace MVCApp.Controllers
 {
@@ -30,6 +32,7 @@ namespace MVCApp.Controllers
             return View();
         }
 
+        //Prikaz liste proizvoda iz baze
         public ActionResult ProductList()
         {
             ViewBag.Message = "List of products";
@@ -37,7 +40,7 @@ namespace MVCApp.Controllers
             var data = ShowProducts();
             List<ProizvodModel> proizvodi = new List<ProizvodModel>();
 
-            foreach(var item in data)
+            foreach (var item in data)
             {
                 proizvodi.Add(new ProizvodModel
                 {
@@ -51,6 +54,17 @@ namespace MVCApp.Controllers
             }
 
             return View(proizvodi);
+        }
+
+        //Prikaz liste proizvoda iz JSON file-a
+        public ActionResult ProductListJson()
+        {
+            ViewBag.Message = "List of products";
+
+            var json = GetJson();
+            var proizvodi = JsonConvert.DeserializeObject<RootObject>(json);
+
+            return View(proizvodi.Proizvodi);
         }
 
     }
